@@ -6,9 +6,8 @@ import { useScrollTo } from "@/hooks/use-scrollTo";
 import { useRef } from "react";
 
 export default function Home(){
-    const nextPageRef = useRef<HTMLElement | null>(null);
-    const scrollTo = useScrollTo<HTMLElement>();
-
+    const nextPageRef = useRef<HTMLDivElement | null>(null);
+    const scrollToNext = useScrollTo(nextPageRef);
 
     return (
         <div className="flex flex-col items-center">
@@ -26,7 +25,7 @@ export default function Home(){
                 </div>
 
                 <CircleArrowDown size={50} strokeWidth={1}
-                                 onClick={()=>scrollTo(nextPageRef)} 
+                                 onClick={scrollToNext} 
                                  className="absolute -bottom-5 animate-bounce cursor-pointer text-background/60 hover:text-background dark:text-background/80 dark:hover:text-background"/>  
             </div>
 

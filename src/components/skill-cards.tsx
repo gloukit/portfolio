@@ -36,7 +36,7 @@ export default function SkillCards(){
         <>
             {skillsData.map((skill)=>(
                 <div key={skill.name} 
-                        className="lg:max-w-lg bg-background text-foreground xl:px-12 lg:px-8 px-4 lg:py-2 py-1.5 
+                        className="xl:max-w-2/3 w-full bg-background text-foreground px-3 lg:py-2.5 py-2
                                    font-bold md:text-2xl text-xl text-center rounded-md
                                    odd:self-start even:self-end">
                     {skill.name}

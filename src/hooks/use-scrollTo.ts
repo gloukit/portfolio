@@ -1,6 +1,5 @@
-
-export function useScrollTo<T extends HTMLElement>(){
-    return (ref:React.RefObject<T>)=>{
-        ref?.current?.scrollIntoView({behavior:"smooth"});
+export function useScrollTo<T extends HTMLElement>(targetRef:React.RefObject<T | null>){
+    return ()=>{
+        targetRef.current?.scrollIntoView({behavior:"smooth"});
     }
 }

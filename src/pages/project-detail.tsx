@@ -21,7 +21,7 @@ export default function ProjectDetail(){
         <div className="flex items-center justify-center">
             {detail && (
                 <div className="w-[90%] h-[90%] flex xl:flex-row flex-col justify-center items-center xl:gap-10 lg:gap-4 gap-3 mt-[100px] md:py-16 py-8">
-                    <img src={detail.image} alt={detail.name}
+                    <img src={`${import.meta.env.BASE_URL}${detail.image}`} alt={detail.name}
                          className="xl:w-[60%] object-contain"/>
 
                     <div className="w-full lg:p-5 p-3 flex flex-col lg:gap-5 gap-4 text-background">
