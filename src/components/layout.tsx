@@ -12,7 +12,7 @@ export default function Layout(){
         <div className="w-full bg-foreground relative">
             <Header scrollToFooter={scrollToFooter}/>
 
-            <main>
+            <main className="mt-[100px]">
                 <Outlet context={{scrollToFooter}}/>
             </main>
 

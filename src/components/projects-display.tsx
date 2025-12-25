@@ -15,6 +15,16 @@ export interface ProjectType {
 
 export const projectsInfos:ProjectType[] = [
     {
+        name:"gloukit news feed",
+        shorten:"Gloukit News",
+        slug:"gloukit_news_feed",
+        description:"News Feed 2.0. A React-based news feed application with a secure BFF architecture using Vercel Serverless Functions to proxy third-party APIs, featuring search, filtering, pagination, and production-ready environment configuration.",
+        stacks:["React","Vercel","TypeScript","TanStack Query","React Router","Tailwind CSS","shadcn/ui"],
+        image:"/gloukit-news.png",
+        webLink:"https://gloukitnews.vercel.app/",
+        githubLink:"https://github.com/gloukit/GloukitNews"
+    },
+    {
         name:"news aggregation web",
         shorten:"News Feed Website",
         slug:"news_aggregation_web",
@@ -31,17 +41,18 @@ export const projectsInfos:ProjectType[] = [
         description:"A weather app powered by TanStack Query for data caching and request management. Includes automatic geolocation detection, interactive weather visualizations, destination search, and the ability to save favorite locations.",
         stacks:["React","TypeScript","TanStack Query","Recharts","React Router","Tailwind CSS","shadcn/ui"],
         image:"/weather-app.png",
-        webLink:"https://gloukit.github.io/Weather-APP-with-React-TypeScript-Tailwind/",
-        githubLink:"https://github.com/gloukit/Weather-APP-with-React-TypeScript-Tailwind"
+        webLink:"https://gloukit.github.io/WeatherAPP/",
+        githubLink:"https://github.com/gloukit/WeatherAPP"
     },
     {
-        name:"e-commerce website",
+        name:"ecommerce website",
         shorten:"Ecommerce Website",
         slug:"ecommerce_website",
         description:"An e-commerce site using Redux to manage cart state and TanStack Query to handle all API-driven data. Supports product search, category filtering, pagination, and full cart operations including add, remove, and quantity updates.",
         stacks:["React","TanStack Query","Redux Toolkit","React Router","Tailwind CSS"],
         image:"/shopping-web.png",
-        githubLink:"https://github.com/gloukit/ShoppingWebsite-with-React-Tailwind"        
+        webLink:"https://gloukit.github.io/ShoppingWebsite/",
+        githubLink:"https://github.com/gloukit/ShoppingWebsite"        
     }
 ]
 
@@ -49,11 +60,11 @@ export default function ProjectsDisplay(){
 
     return (
         <>
-            <div className="lg:text-4xl md:text-3xl text-2xl text-background font-bold flex justify-center">
+            <div className="lg:text-4xl md:text-3xl text-2xl text-background font-bold flex justify-center mb-5">
                 My Projects
             </div>
 
-            <div className="lg:w-4xl md:w-xl w-sm mx-auto my-4">
+            <div className="lg:w-4xl md:w-xl w-4/5 mx-auto my-auto">
                 <Carousel>
                     <CarouselContent>
                         {projectsInfos.map((project,index)=>(

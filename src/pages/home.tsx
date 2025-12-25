@@ -13,7 +13,7 @@ export default function Home(){
         <div className="flex flex-col items-center">
 
             {/*Page1*/}
-            <div className="relative flex flex-col items-center w-[90%] mt-[100px] py-[60px]">
+            <div className="w-[90%] relative py-[60px] flex flex-col items-center justify-between">
                 <div className="w-full flex items-center justify-around gap-10">
                     <div className="flex flex-col lg:gap-5 gap-3 lg:w-[70%]">
                         <Profile/>
@@ -26,7 +26,7 @@ export default function Home(){
 
                 <CircleArrowDown size={50} strokeWidth={1}
                                  onClick={scrollToNext} 
-                                 className="absolute -bottom-5 animate-bounce cursor-pointer text-background/60 hover:text-background dark:text-background/80 dark:hover:text-background"/>  
+                                 className="absolute -bottom-15 animate-bounce cursor-pointer text-background/60 hover:text-background dark:text-background/80 dark:hover:text-background"/>  
             </div>
 
             {/*Page2*/}
